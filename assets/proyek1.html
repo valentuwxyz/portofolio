@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Portofolio Valentina Zega</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f0f7;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            width: 650px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .header {
+            border-bottom: 2px solid #5e35b1;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Sembunyikan radio button bawaan */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Navigasi Tombol yang Bisa Diklik */
+        .nav {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+        }
+
+        .nav label {
+            color: #5e35b1;
+            margin-right: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+
+        /* Tampilan tombol saat aktif/ditekan */
+        #tab-home:checked ~ .nav label[for="tab-home"],
+        #tab-contact:checked ~ .nav label[for="tab-contact"],
+        #tab-about:checked ~ .nav label[for="tab-about"] {
+            background: #5e35b1;
+            color: white;
+            border-radius: 4px;
+        }
+
+        /* Sembunyikan semua isi halaman dulu */
+        .tab-content {
+            display: none;
+        }
+
+        /* Tampilkan isi halaman sesuai tombol yang ditekan */
+        #tab-home:checked ~ #content-home,
+        #tab-contact:checked ~ #content-contact,
+        #tab-about:checked ~ #content-about {
+            display: block;
+        }
+
+        /* Styling elemen biasa */
+        .profile-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        th {
+            background: #ede7f6;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #5e35b1;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Radio Button tersembunyi sebagai penanda tab aktif -->
+        <input type="radio" id="tab-home" name="menu" checked>
+        <input type="radio" id="tab-contact" name="menu">
+        <input type="radio" id="tab-about" name="menu">
+
+        <!-- Header Utama -->
+        <div class="header">
+            <h2>Valentina Zega</h2>
+            <p style="font-size: 13px; color: gray; margin-top: 3px;">Teknologi Informasi - Fasilkom TI</p>
+        </div>
+
+        <!-- Menu Navigasi yang Bisa Ditekan/Diklik -->
+        <div class="nav">
+            <label for="tab-home">Home</label>
+            <label for="tab-contact">Contact</label>
+            <label for="tab-about">About Me</label>
+        </div>
+
+        <!-- ISI HALAMAN 1: HOME -->
+        <div class="tab-content" id="content-home">
+            <img src="file:///C:/Users/ASUS/Downloads/WhatsApp Image 2026-09-19 at 21.50.47.jpeg" class="profile-img" alt="Foto">
+            <h3 class="text-center" style="margin-top:10px;">Valentina Zega</h3>
+            <p class="text-center" style="color:gray; font-size:13px;">(Mahasiswa)</p>
+
+            <h4 style="margin-top:20px; border-bottom: 1px solid #ccc; padding-bottom: 5px;">Overview</h4>
+            <p style="font-size:14px; line-height: 1.4;">Hi, saya adalah seorang Mahasiswa di Universitas Sumatera Utara. Saat ini sedang belajar HTML di Fasilkom-TI.</p>
+
+            <table>
+                <tr>
+                    <th>Skill</th>
+                    <th>Pengalaman</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                        <li>Communication</li>
+                        <li>Creative Thinking</li>
+                        <li>Cooperative</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                        <li>Ketua Koordinator 2 OSIS SMA</li>
+                        <li>Anggota Divisi Acara</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- ISI HALAMAN 2: CONTACT -->
+        <div class="tab-content" id="content-contact">
+            <h3>Apakah ada hal yang ingin Anda Sampaikan?</h3>
+            <br>
+            <form>
+                <label>Nama:</label>
+                <input type="text" placeholder="Tulis nama lengkap anda">
+
+                <label>Pesan:</label>
+                <textarea rows="4" placeholder="Tulis pesan anda..."></textarea>
+
+                <button type="button">Kirim</button>
+            </form>
+        </div>
+
+<!-- ISI HALAMAN 3: ABOUT ME -->
+        <div class="tab-content" id="content-about">
+            <h3>Sedikit Informasi</h3>
+            <p style="font-size:14px; line-height: 1.5;">Hi, saya adalah mahasiswa yang berdomisili di Medan. Saat ini sedang belajar HTML di Fasilkom-TI.<br>
+            Saya memang masih baru dalam web development, karena itu saya tidak akan pernah berhenti belajar.<br>
+            Saya ingin menguasai bahasa HTML, CSS, dan JavaScript. Simak video tentang belajar koding dari 0!.</p>
+            
+            <br>
+            <iframe 
+                width="320" 
+                height="180" 
+                src="https://www.youtube.com/embed/unxpUD9Xd_c" 
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen 
+                style="border:1px solid #ccc;">
+            </iframe>
+        </div>
+
+    </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Valent</title>
+    <!-- File CSS Terpisah -->
+    <link rel="stylesheet" href="challenge.css">
+    <!-- Google Fonts Aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- PEMUTAR MUSIK LOKAL (LAGU.MP3) -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="lagu.mp3" type="audio/mpeg">
+        Browsermu tidak mendukung pemutar audio.
+    </audio>
+
+    <!-- DEKORASI EMOJI & AMBIENT GLOW -->
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+    <div class="bg-glow glow-3"></div>
+
+    <div class="sparkle sp-1">✨</div>
+    <div class="sparkle sp-2">🌸</div>
+    <div class="sparkle sp-3">💖</div>
+    <div class="sparkle sp-4">⭐</div>
+    <div class="sparkle sp-5">🎀</div>
+    <div class="sparkle sp-6">🌷</div>
+    <div class="sparkle sp-7">💜</div>
+
+    <div class="portfolio-app">
+
+        <!-- NAVIGASI TAB UTAMA -->
+        <nav class="page-nav-sidebar">
+            <div class="nav-title">📌 Halaman</div>
+            <button class="nav-tab active" onclick="showPage(1)"><i class="fa-solid fa-heart"></i> <span>1. Identitas</span></button>
+            <button class="nav-tab" onclick="showPage(2)"><i class="fa-solid fa-graduation-cap"></i> <span>2. Pendidikan</span></button>
+            <button class="nav-tab" onclick="showPage(3)"><i class="fa-solid fa-wand-magic-sparkles"></i> <span>3. Soft Skills</span></button>
+            <button class="nav-tab" onclick="showPage(4)"><i class="fa-solid fa-face-smile-wink"></i> <span>4. Unik & Likes</span></button>
+            <button class="nav-tab" onclick="showPage(5)"><i class="fa-solid fa-trophy"></i> <span>5. Prestasi</span></button>
+            <button class="nav-tab" onclick="showPage(6)"><i class="fa-solid fa-heart"></i> <span>6. Penutup</span></button>
+        </nav>
+
+        <!-- KONTEN BUKU PORTFOLIO -->
+        <main class="page-container">
+
+            <!-- HALAMAN 1: IDENTITAS DIRI (SLIDER 3 FOTO) -->
+            <section id="page-1" class="page-card active">
+                <div class="sticker-ribbon">🎀 Valentina's Space</div>
+                <div class="page-header">
+                    <h2>Identitas Diri</h2>
+                </div>
+                
+                <div class="hero-layout">
+                    <!-- FOTO INTERAKTIF SLIDER 3 FOTO -->
+                    <div class="single-photo-slider" onclick="nextIdentityPhoto()">
+                        <div class="polaroid-frame">
+                            <img id="identityPhoto" src="valen1.jpg" onerror="this.src='https://via.placeholder.com/220x290/d8b4fe/583c7d?text=Foto+1+Valentina'" alt="Foto Valentina">
+                            <span id="identityCaption" class="photo-caption">Valentina Zega</span>
+                        </div>
+                        <div class="slider-dots" id="identityDots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+
+                    <!-- RINCIAN IDENTITAS -->
+                    <div class="hero-details">
+                        <h1>Valentina Zega</h1>
+                        <p class="study-label"><i class="fa-solid fa-star"></i> Perempuan Libra </p>
+                        
+                        <div class="identity-grid">
+                            <div class="id-item">
+                                <div class="icon-box"><i class="fa-solid fa-user"></i></div>
+                                <div class="id-text">
+                                    <span>Nama Lengkap</span>
+                                    <strong>Valentina Zega </strong>
+                                </div>
+                            </div>
+                            <div class="id-item">
+                                <div class="icon-box"><i class="fa-solid fa-face-smile"></i></div>
+                                <div class="id-text">
+                                    <span>Nama Panggilan</span>
+                                    <strong>Valen / Alent </strong>
+                                </div>
+                            </div>
+                            <div class="id-item">
+                                <div class="icon-box"><i class="fa-solid fa-cake-candles"></i></div>
+                                <div class="id-text">
+                                    <span>Tanggal Lahir</span>
+                                    <strong>11 Oktober 2008</strong>
+                                </div>
+                            </div>
+                            <div class="id-item">
+                                <div class="icon-box"><i class="fa-solid fa-users-between-lines"></i></div>
+                                <div class="id-text">
+                                    <span>Posisi Keluarga</span>
+                                    <strong>Anak ke-3 dari 3 Bersaudara </strong>
+                                </div>
+                            </div>
+                            <div class="id-item">
+                                <div class="icon-box"><i class="fa-solid fa-id-card"></i></div>
+                                <div class="id-text">
+                                    <span>NIM</span>
+                                    <strong>261402084 </strong>
+                                </div>
+                            </div>
+                            <div class="id-item">
+                                <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="id-text">
+                                    <span>Asal Daerah</span>
+                                    <strong>Gunungsitoli</strong>
+                                </div>
+                            </div>
+                            
+                            <!-- WIDGET PEMUTAR MUSIK -->
+                            <div class="id-item full-width music-player-card">
+                                <div class="music-icon-box" onclick="toggleAudioMusic()">
+                                    <i id="musicPlayIcon" class="fa-solid fa-play"></i>
+                                </div>
+                                <div class="music-info">
+                                    <span class="music-label">My Favorit Song (ME!)</span>
+                                    <strong class="music-title">Playing Audio ✨</strong>
+                                    <div class="music-bar-bg">
+                                        <div id="musicProgress" class="music-bar-fill"></div>
+                                    </div>
+                                </div>
+                                <button type="button" class="music-toggle-btn" onclick="toggleAudioMusic()">
+                                    <span id="musicBtnText">Play 🎵</span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-footer-btn">
+                    <div></div>
+                    <button type="button" class="btn-next" onclick="showPage(2)">Halaman Selanjutnya <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </section>
+
+            <!-- HALAMAN 2: RIWAYAT PENDIDIKAN -->
+            <section id="page-2" class="page-card">
+                <div class="page-header">
+                    <h2>Jejak Langkah Pendidikan</h2>
+                    <p class="sub-header-text">Di setiap jenjang pendidikan, ada tangan Tuhan yang selalu menuntun langkahku</p>
+                </div>
+
+                <div class="edu-tab-buttons">
+                    <button type="button" class="edu-tab-btn active" onclick="switchEdu('sd')">🏫 SD Nazalou</button>
+                    <button type="button" class="edu-tab-btn" onclick="switchEdu('smp')">🎒 SMP Lentera Harapan</button>
+                    <button type="button" class="edu-tab-btn" onclick="switchEdu('sma')">🎓 SMA Lentera Harapan</button>
+                    <button type="button" class="edu-tab-btn" onclick="switchEdu('kuliah')">🏛️ USU Fasilkom-TI</button>
+                </div>
+
+                <div class="edu-display-area">
+                    <!-- SD -->
+                    <div id="edu-sd" class="edu-card-interactive active">
+                        <div class="edu-portrait-slider">
+                            <div class="edu-portrait-box">
+                                <img src="sd.jpg" onerror="this.src='https://via.placeholder.com/200x260/d8b4fe/583c7d?text=Foto+SD'" alt="Foto SD">
+                                <span class="photo-caption">Masa SD</span>
+                            </div>
+                        </div>
+                        <div class="edu-info">
+                            <span class="level-badge"><i class="fa-solid fa-school"></i> Sekolah Dasar</span>
+                            <h3>SDN Nazalou 071031</h3>
+                            <p class="edu-period"><i class="fa-regular fa-calendar-check"></i> 2014-2016 </p>
+                            <p class="edu-desc">Awal perjalanan menuntut ilmu di Gunungsitoli, mengasah bakat dasar, serta membangun karakter belajar yang tekun, mandiri, dan ceria.</p>
+                        </div>
+                    </div>
+
+                    <!-- SMP -->
+                    <div id="edu-smp" class="edu-card-interactive">
+                        <div class="edu-portrait-slider">
+                            <div class="edu-portrait-box">
+                                <img src="smp.jpg" onerror="this.src='https://via.placeholder.com/200x260/d8b4fe/583c7d?text=Foto+SMP'" alt="Foto SMP">
+                                <span class="photo-caption">Masa SMP</span>
+                            </div>
+                        </div>
+                        <div class="edu-info">
+                            <span class="level-badge"><i class="fa-solid fa-book-open"></i> Sekolah Menengah Pertama</span>
+                            <h3>SMP Swasta Lentera Harapan Gunungsitoli</h3>
+                            <p class="edu-period"> 2020-2023 </p>
+                            <p class="edu-desc">Mulai aktif mengeksplorasi minat dalam seni musik, public speaking, kerja tim, serta pembentukan kepemimpinan karakter muda.</p>
+                        </div>
+                    </div>
+
+                    <!-- SMA -->
+                    <div id="edu-sma" class="edu-card-interactive">
+                        <div class="edu-portrait-slider">
+                            <div class="edu-portrait-box">
+                                <img src="sma.jpg" onerror="this.src='https://via.placeholder.com/200x260/d8b4fe/583c7d?text=Foto+SMA'" alt="Foto SMA">
+                                <span class="photo-caption">Masa SMA</span>
+                            </div>
+                        </div>
+                        <div class="edu-info">
+                            <span class="level-badge"><i class="fa-solid fa-award"></i> Sekolah Menengah Atas</span>
+                            <h3>SMA Swasta Lentera Harapan Gunungsitoli</h3>
+                            <p class="edu-period"><i class="fa-regular fa-calendar-check"></i> 2023-2026 </p>
+                            <p class="edu-desc">Aktif dalam organisasi OSIS, mendirikan Sanggar Tari Sekolah, dan menyutradarai film pendek pemenang Juara 2 FLS3N Kota.</p>
+                        </div>
+                    </div>
+
+                    <!-- KULIAH -->
+                    <div id="edu-kuliah" class="edu-card-interactive">
+                        <div class="edu-portrait-slider">
+                            <div class="edu-portrait-box">
+                                <img src="kuliah.jpg" onerror="this.src='https://via.placeholder.com/200x260/d8b4fe/583c7d?text=Foto+Kuliah'" alt="Foto Kuliah">
+                                <span class="photo-caption">Kuliah USU</span>
+                            </div>
+                        </div>
+                        <div class="edu-info">
+                            <span class="level-badge"><i class="fa-solid fa-university"></i> Perguruan Tinggi</span>
+                            <h3>Universitas Sumatera Utara</h3>
+                            <p class="edu-period"><i class="fa-regular fa-calendar-check"></i> 2026 - Sekarang</p>
+                            <p class="edu-desc">Fakultas Ilmu Komputer dan Teknologi Informasi (Fasilkom-TI) • Program Studi Teknologi Informasi • Terpilih sebagai Duta PKKMB Fasilkom-TI 2026.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-footer-btn">
+                    <button type="button" class="btn-prev" onclick="showPage(1)"><i class="fa-solid fa-arrow-left"></i> Halaman Sebelumnya</button>
+                    <button type="button" class="btn-next" onclick="showPage(3)">Halaman Selanjutnya <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </section>
+
+            <!-- HALAMAN 3: SOFT SKILLS -->
+            <section id="page-3" class="page-card">
+                <div class="page-header">
+                    <h2>Soft Skills & Keahlian</h2>
+                    <p class="sub-header-text">Di balik setiap jemari yang menari dan karya yang terukir, ada anugerah Tuhan yang selalu menuntun. Sebab tanpa-Nya aku bukanlah siapa-siapa</p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card" onclick="openSkillModal('memasak')">
+                        <div class="skill-portrait">
+                            <img src="skill_masak.jpg" onerror="this.src='https://via.placeholder.com/180x240/d8b4fe/583c7d?text=Memasak'" alt="Memasak">
+                        </div>
+                        <div class="skill-info">
+                            <h4>Memasak 🍳</h4>
+                            <span class="click-hint"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" onclick="openSkillModal('gitar')">
+                        <div class="skill-portrait">
+                            <img src="skill_gitar.jpg" onerror="this.src='https://via.placeholder.com/180x240/d8b4fe/583c7d?text=Gitar'" alt="Main Gitar">
+                        </div>
+                        <div class="skill-info">
+                            <h4>Main Gitar 🎸</h4>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" onclick="openSkillModal('ukulele')">
+                        <div class="skill-portrait">
+                            <img src="skill_ukulele.jpg" onerror="this.src='https://via.placeholder.com/180x240/d8b4fe/583c7d?text=Ukulele'" alt="Main Ukulele">
+                        </div>
+                        <div class="skill-info">
+                            <h4>Main Ukulele 🎶</h4>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" onclick="openSkillModal('keyboard')">
+                        <div class="skill-portrait">
+                            <img src="skill_keyboard.jpg" onerror="this.src='https://via.placeholder.com/180x240/d8b4fe/583c7d?text=Keyboard'" alt="Main Keyboard">
+                        </div>
+                        <div class="skill-info">
+                            <h4>Main Keyboard 🎹</h4>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" onclick="openSkillModal('mengajar')">
+                        <div class="skill-portrait">
+                            <img src="skill_mengajar.jpg" onerror="this.src='https://via.placeholder.com/180x240/d8b4fe/583c7d?text=Mengajar'" alt="Mengajar Anak-anak">
+                        </div>
+                        <div class="skill-info">
+                            <h4>Mengajar Anak 🧸</h4>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" onclick="openSkillModal('speaking')">
+                        <div class="skill-portrait">
+                            <img src="skill_speaking.jpg" onerror="this.src='https://via.placeholder.com/180x240/d8b4fe/583c7d?text=Speaking'" alt="Public Speaking">
+                        </div>
+                        <div class="skill-info">
+                            <h4>Public Speaking 📢</h4>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" onclick="openSkillModal('menari')">
+                        <div class="skill-portrait">
+                            <img src="skill_menari.jpg" onerror="this.src='https://via.placeholder.com/180x240/d8b4fe/583c7d?text=Menari'" alt="Menari">
+                        </div>
+                        <div class="skill-info">
+                            <h4>Menari 💃</h4>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" onclick="openSkillModal('kerajinan')">
+                        <div class="skill-portrait">
+                            <img src="skill_kerajinan.jpg" onerror="this.src='https://via.placeholder.com/180x240/d8b4fe/583c7d?text=Kerajinan'" alt="Kerajinan Tangan">
+                        </div>
+                        <div class="skill-info">
+                            <h4>Kerajinan Tangan ✂️</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-footer-btn">
+                    <button type="button" class="btn-prev" onclick="showPage(2)"><i class="fa-solid fa-arrow-left"></i> Halaman Sebelumnya</button>
+                    <button type="button" class="btn-next" onclick="showPage(4)">Halaman Selanjutnya <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </section>
+
+            <!-- HALAMAN 4: PERSONALITAS & HELLO JADOO -->
+            <section id="page-4" class="page-card">
+                <div class="page-header">
+                    <h2>Hal Unik & Preferensi</h2>
+                </div>
+
+                <div class="personality-columns">
+                    <div class="p-box unique-box">
+                        <h3><i class="fa-solid fa-lightbulb"></i> Hal-Hal Unik </h3>
+                        <ul>
+                            <li><i class="fa-solid fa-star"></i> Tidak suka vibes jam setengah 6 sampai jam 7 malam. </li>
+                            <li><i class="fa-solid fa-star"></i> Punya 8 akun tik tok privat hanya untuk upload vidio </li>
+                            <li><i class="fa-solid fa-star"></i> Lihat foto dan vidio di album berkali kali kalau lagi kangen </li>
+                        </ul>
+                    </div>
+
+                    <div class="p-box likes-box">
+                        <h3><i class="fa-solid fa-heart"></i> Things I Like </h3>
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> Sangat suka berinteraksi dengan anak-anak </li>
+                            <li><i class="fa-solid fa-check"></i> Exited dengan hal hal baru, tapi setelah itu cepat bosan</li>
+                            <li><i class="fa-solid fa-check"></i> Suka warna unguuuuuuuuuuuuuu</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-box dislikes-box">
+                        <h3><i class="fa-solid fa-circle-xmark"></i> Things I Dislike </h3>
+                        <ul>
+                            <li><i class="fa-solid fa-xmark"></i> Tidak suka dibentak atau hal yang sedemikian yang membuat ketidakadanya kedamaian</li>
+                            <li><i class="fa-solid fa-xmark"></i> Tidak suka minum obat dan tidak bisa minum obat </li>
+                            <li><i class="fa-solid fa-xmark"></i> Tidak suka dengan orang perokok</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- KARTU HELLO JADOO -->
+                <div class="jadoo-card">
+                    <div class="jadoo-icon">
+                        <i class="fa-solid fa-tv"></i>
+                    </div>
+                    <div class="jadoo-text">
+                        <h3><i class="fa-solid fa-film"></i> Tontonan Favorit: Hello Jadoo! 🎀</h3>
+                        <p>Salah satu hiburan yang paling disukai di waktu senggang adalah menonton serial animasi <strong>Hello Jadoo</strong>. Ceritanya yang lucu, hangat, dan penuh kenangan masa kecil selalu berhasil bikin tersenyum!</p>
+                        <a href="https://www.youtube.com/@HelloJadooBahasaIndonesia" target="_blank" class="youtube-btn">
+                            <i class="fa-brands fa-youtube"></i> Tonton Hello Jadoo di YouTube 🎬
+                        </a>
+                    </div>
+                </div>
+
+                <div class="page-footer-btn">
+                    <button type="button" class="btn-prev" onclick="showPage(3)"><i class="fa-solid fa-arrow-left"></i> Halaman Sebelumnya</button>
+                    <button type="button" class="btn-next" onclick="showPage(5)">Halaman Selanjutnya <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </section>
+
+            <!-- HALAMAN 5: PRESTASI & REKAM JEJAK -->
+            <section id="page-5" class="page-card">
+                <div class="page-header">
+                    <h2>Prestasi & Rekam Jejak</h2>
+                </div>
+
+                <div class="achieve-list">
+                    <!-- POIN 1: DUTA PKKMB -->
+                    <div class="achieve-item">
+                        <div class="achieve-portrait-box">
+                            <img src="prestasi_duta.jpg" onerror="this.src='https://via.placeholder.com/180x240/d8b4fe/583c7d?text=Duta+PKKMB'" alt="Duta PKKMB">
+                            <span class="photo-caption">2026</span>
+                        </div>
+                        <div class="achieve-content">
+                            <span class="year-tag"><i class="fa-solid fa-crown"></i> Duta Fakultas</span>
+                            <h3>Duta PKKMB Fasilkom-TI USU</h3>
+                            <p>Terpilih sebagai Duta Fakultas Ilmu Komputer dan Teknologi Informasi.</p>
+                        </div>
+                    </div>
+
+                    <!-- POIN 2: OSIS PERIODE 1 (DIVISI ACARA) -->
+                    <div class="achieve-item">
+                        <div class="achieve-portrait-box">
+                            <img src="prestasi_osis1.jpg" onerror="this.src='https://via.placeholder.com/180x240/d8b4fe/583c7d?text=Divisi+Acara'" alt="OSIS Divisi Acara">
+                            <span class="photo-caption">2023-2024</span>
+                        </div>
+                        <div class="achieve-content">
+                            <span class="year-tag"><i class="fa-solid fa-users"></i> Kepemimpinan OSIS</span>
+                            <h3>Anggota Divisi Acara OSIS</h3>
+                            <p>Aktif merancang, mengonsep, dan menyukseskan berbagai kegiatan serta event besar sekolah dengan penuh tanggung jawab.</p>
+                        </div>
+                    </div>
+
+                    <!-- POIN 3: OSIS PERIODE 2 (KETUA KOORDINATOR 2) -->
+                    <div class="achieve-item">
+                        <div class="achieve-portrait-box">
+                            <img src="prestasi_osis2.jpg" onerror="this.src='https://via.placeholder.com/180x240/d8b4fe/583c7d?text=Koordinator+2'" alt="Ketua Koordinator 2 OSIS">
+                            <span class="photo-caption"> 2024-2025</span>
+                        </div>
+                        <div class="achieve-content">
+                            <span class="year-tag"><i class="fa-solid fa-star"></i> Kepemimpinan OSIS</span>
+                            <h3>Ketua Koordinator 2 OSIS</h3>
+                            <p>Memegang amanah kepemimpinan tingkat lanjut, mengkoordinir divisi-divisi, serta menjadi teladan dalam organisasi siswa.</p>
+                        </div>
+                    </div>
+
+                    <!-- POIN 4: FLS3N FILM PENDEK -->
+                    <div class="achieve-item">
+                        <div class="achieve-portrait-box">
+                            <img src="prestasi_fls3n.jpg" onerror="this.src='https://via.placeholder.com/180x240/d8b4fe/583c7d?text=FLS3N+Film'" alt="Film FLS3N">
+                            <span class="photo-caption"> 2026 </span>
+                        </div>
+                        <div class="achieve-content">
+                            <span class="year-tag"><i class="fa-solid fa-clapperboard"></i> FLS3N Kota</span>
+                            <h3>Sutradara Film Pendek</h3>
+                            <p>Mengarahkan karya film pendek edukatif dengan judul <em>"UDAYANA"</em> hingga meraih posisi Juara 2 FLS3N Tingkat Kota Gunungsitoli.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-footer-btn">
+                    <button type="button" class="btn-prev" onclick="showPage(4)"><i class="fa-solid fa-arrow-left"></i> Halaman Sebelumnya</button>
+                    <button type="button" class="btn-next" onclick="showPage(6)">Halaman Selanjutnya <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </section>
+
+            <!-- HALAMAN 6: PENUTUP -->
+            <section id="page-6" class="page-card closing-card">
+                <div class="closing-header">
+                    <h2>Lembar Penutup</h2>
+                </div>
+
+                <div class="closing-layout">
+                    <div class="closing-portrait-box">
+                        <img src="valen4.jpg" onerror="this.src='https://via.placeholder.com/200x270/d8b4fe/583c7d?text=Valentina'" alt="Foto Valentina">
+                        <span class="photo-caption">Valentina Zega</span>
+                    </div>
+                    <div class="closing-text">
+                        <i class="fa-solid fa-quote-left quote-mark"></i>
+                        <h2>"When we only do what we can, we will never grow. Push your boundaries, step into the unknown, and trust God with the rest—because you were born to shine, not to stay small."</h2>
+                        <p class="author-name">— Valentina Zega</p>
+                        <p class="closing-sub">Terima kasih telah membaca lembar portofolio saya, semoga terberkati, God Bless You!</p>
+                        
+                        <!-- TOMBOL SAY HI -->
+                        <div class="say-hi-container">
+                            <button type="button" class="say-hi-btn" onclick="sendHaloValent()">
+                                <span class="wave-hand">👋</span> Send Halo untuk Valent!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KARTU KONTAK MEDIA SOSIAL -->
+                <div class="social-contact-box">
+                    <h3> Yuk, Terhubung dengan Valent! </h3>
+                    <div class="social-grid">
+                        <a href="https://instagram.com/valentv.v" target="_blank" class="social-btn ig-btn">
+                            <i class="fa-brands fa-instagram"></i>
+                            <div>
+                                <span>Instagram</span>
+                                <strong>@valentv.v</strong>
+                            </div>
+                        </a>
+                        <a href="https://tiktok.com/@valentheree" target="_blank" class="social-btn tt-btn">
+                            <i class="fa-brands fa-tiktok"></i>
+                            <div>
+                                <span>TikTok</span>
+                                <strong>@valentheree</strong>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/6285142198183" target="_blank" class="social-btn wa-btn">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <div>
+                                <span>WhatsApp</span>
+                                <strong>085142198183</strong>
+                            </div>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="social-btn fb-btn">
+                            <i class="fa-brands fa-facebook"></i>
+                            <div>
+                                <span>Facebook</span>
+                                <strong>Valent</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="page-footer-btn">
+                    <button type="button" class="btn-prev" onclick="showPage(5)"><i class="fa-solid fa-arrow-left"></i> Halaman Sebelumnya</button>
+                    <button type="button" class="btn-home" onclick="showPage(1)"><i class="fa-solid fa-rotate-left"></i> Kembali ke Halaman 1</button>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- MODAL POPUP PUITIS -->
+    <div id="skillModal" class="modal-overlay" onclick="closeSkillModal(event)">
+        <div class="modal-card">
+            <button type="button" class="close-modal-btn" onclick="closeSkillModalDirect()">&times;</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- SCRIPT JAVASCRIPT -->
+    <script>
+        // SLIDER 3 FOTO DI HALAMAN 1 (IDENTITAS DIRI)
+        var identityPhotos = [
+            { img: "valen1.jpg", caption: "💖 Valentina Zega (1/3)" },
+            { img: "valen2.jpg", caption: "✨ Duta PKKMB USU (2/3)" },
+            { img: "valen3.jpg", caption: "🌷 Student Fasilkom (3/3)" }
+        ];
+        var currentIdentityIndex = 0;
+
+        function nextIdentityPhoto() {
+            currentIdentityIndex = (currentIdentityIndex + 1) % identityPhotos.length;
+            var photoElem = document.getElementById('identityPhoto');
+            var captionElem = document.getElementById('identityCaption');
+            
+            photoElem.style.opacity = '0.2';
+            setTimeout(function() {
+                photoElem.src = identityPhotos[currentIdentityIndex].img;
+                captionElem.innerText = identityPhotos[currentIdentityIndex].caption;
+                photoElem.style.opacity = '1';
+                
+                var dots = document.querySelectorAll('#identityDots .dot');
+                dots.forEach(function(dot, idx) {
+                    if (idx === currentIdentityIndex) dot.classList.add('active');
+                    else dot.classList.remove('active');
+                });
+            }, 180);
+        }
+
+        // KONTROL PEMUTAR AUDIO MUSIK
+        var isMusicPlaying = false;
+        var bgMusic = document.getElementById('bgMusic');
+
+        function toggleAudioMusic() {
+            var playIcon = document.getElementById('musicPlayIcon');
+            var btnText = document.getElementById('musicBtnText');
+
+            if (isMusicPlaying) {
+                bgMusic.pause();
+                isMusicPlaying = false;
+                playIcon.className = "fa-solid fa-play";
+                btnText.innerText = "Play 🎵";
+            } else {
+                bgMusic.play().then(function() {
+                    isMusicPlaying = true;
+                    playIcon.className = "fa-solid fa-pause";
+                    btnText.innerText = "Pause ⏸️";
+                }).catch(function(err) {
+                    console.log("Audio play blocked:", err);
+                });
+            }
+        }
+
+        // FUNGSI LAMBAIKAN TANGAN "SEND HALO UNTUK VALENT"
+        function sendHaloValent() {
+            var waveIcon = document.querySelector('.wave-hand');
+            if (waveIcon) {
+                waveIcon.style.animation = 'waveAnim 0.6s ease infinite';
+            }
+            
+            setTimeout(function() {
+                var confirmMsg = confirm("Halo! 👋 Terima kasih sudah berkunjung ke portofolio Valentina Zega. Mau langsung terhubung dan berkenalan via WhatsApp?");
+                if (confirmMsg) {
+                    window.open("https://wa.me/6285142198183?text=Halo%20Valentina!%20%F0%9F%90%B6%20Saya%20suka%20portofolio%20interaktif%20kamu,%20salam%20kenal%20ya!", "_blank");
+                }
+            }, 300);
+        }
+
+        function showPage(pageNumber) {
+            var pages = document.querySelectorAll('.page-card');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].classList.remove('active');
+            }
+
+            var tabs = document.querySelectorAll('.nav-tab');
+            for (var j = 0; j < tabs.length; j++) {
+                tabs[j].classList.remove('active');
+            }
+
+            var targetPage = document.getElementById('page-' + pageNumber);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+
+            if (tabs[pageNumber - 1]) {
+                tabs[pageNumber - 1].classList.add('active');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function switchEdu(eduId) {
+            var eduCards = document.querySelectorAll('.edu-card-interactive');
+            for (var i = 0; i < eduCards.length; i++) {
+                eduCards[i].classList.remove('active');
+            }
+
+            var eduBtns = document.querySelectorAll('.edu-tab-btn');
+            for (var j = 0; j < eduBtns.length; j++) {
+                eduBtns[j].classList.remove('active');
+            }
+
+            var targetEdu = document.getElementById('edu-' + eduId);
+            if (targetEdu) {
+                targetEdu.classList.add('active');
+            }
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.add('active');
+            }
+        }
+
+        var poeticSkills = {
+            memasak: { title: "🍳 Memasak: Seni Merajut Rasa", poem: "Memasak bukan sekadar mencampur rasa di atas kuali, melainkan seni merajut kehangatan. Setiap bumbu yang ditabur adalah untaian doa, dan setiap aroma yang terhirup adalah puisi manis yang merangkul jiwa.", img: "skill_masak.jpg" },
+            gitar: { title: "🎸 Main Gitar: Petikan Harmoni Jiwa", poem: "Enam dawai yang direntang adalah cermin perasaan. Lewat jemari yang menari di atas senar, nada-nada hangat tercipta merawat sepi dan mengalunkan keindahan sederhana.", img: "skill_gitar.jpg" },
+            ukulele: { title: "🎶 Main Ukulele: Kecil yang Ceria", poem: "Instrumen mungil berjiwa riang. Petikan ukulelenya senantiasa membawa ingatan pada senja di tepi pantai, menghadirkan tawa manis di tengah riuhnya hari.", img: "skill_ukulele.jpg" },
+            keyboard: { title: "🎹 Main Keyboard: Melodi Langkah", poem: "Tuts hitam dan putih seperti untaian takdir kehidupan. Saat ditekan dalam keselarasan, terciptalah simfoni keindahan yang menenangkan ketegangan pikiran.", img: "skill_keyboard.jpg" },
+            mengajar: { title: "🧸 Mengajar Anak-Anak: Menyemai Bintang", poem: "Menjadi pelita kecil bagi jiwa-jiwa yang murni. Mengajar anak-anak adalah melukis harapan di benak mereka, menuntun langkah kecil menuju masa depan yang gemerlap.", img: "skill_mengajar.jpg" },
+            speaking: { title: "📢 Public Speaking: Jembatan Gagasan", poem: "Kata adalah kekuatan, dan suara adalah lentera. Melalui tutur kata yang teratur dan tulus, pesan kebaikan mampu menyentuh ribuan hati dan menyatukan pemikiran.", img: "skill_speaking.jpg" },
+            menari: { title: "💃 Menari: Puisi Tanpa Suara", poem: "Setiap gestur dan lengkuk jemari adalah bait-bait rasa yang tak terucapkan. Menari adalah cara tubuh merayakan kehidupan dan mengekspresikan keindahan budaya.", img: "skill_menari.jpg" },
+            kerajinan: { title: "✂️ Kerajinan Tangan: Magis Sentuhan Tangan", poem: "Dari bahan sederhana menjadi karya yang berharga. Kerajinan tangan melatih ketelitian jiwa dan membuktikan bahwa ketekunan mampu melahirkan keindahan yang abadi.", img: "skill_kerajinan.jpg" }
+        };
+
+        function openSkillModal(skillKey) {
+            var data = poeticSkills[skillKey];
+            if (!data) return;
+
+            var modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="modal-body-layout">
+                    <div class="modal-img-box">
+                        <img src="${data.img}" onerror="this.src='https://via.placeholder.com/180x240/d8b4fe/583c7d?text=Skill'" alt="${data.title}">
+                    </div>
+                    <div class="modal-text-box">
+                        <h3>${data.title}</h3>
+                        <p class="poetic-quote">"${data.poem}"</p>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('skillModal').classList.add('active');
+        }
+
+        function closeSkillModal(event) {
+            if (event.target.classList.contains('modal-overlay')) {
+                document.getElementById('skillModal').classList.remove('active');
+            }
+        }
+
+        function closeSkillModalDirect() {
+            document.getElementById('skillModal').classList.remove('active');
+        }
+    </script>
+</body>
+</html>

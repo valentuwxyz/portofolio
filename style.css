@@ -1,0 +1,21 @@
+body {
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.navbar-lilac {
+    background-color: rgba(245, 227, 246, 0.715) !important; 
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #f4f7f6 0%, #fdd9ff 100%);
+    min-height: 80vh;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
